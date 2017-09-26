@@ -1,11 +1,12 @@
 <div class="newcustomershowcase">
   <div class="newcustomercontainer">
       <h3>تسجيل زبون جديد</h3>
-        <form class="register" style="display:flex;flex-direction:column;"action="/signup" method="post">
-          <input type="text" name="name" placeholder="أدخل اسم الزبون">
-          <input type="text" name="phone" placeholder="أدخل رقم هاتف الزبون">
-          <input type="address" name="address" placeholder="أدخل عنوان الزبون">
+        <form class="register" style="display:flex;flex-direction:column;" action="/signup" method="post">
+          <input id="username" type="text" name="name" placeholder="أدخل اسم الزبون" required><span id="validName"></span>
+          <input id="phone" type="text" name="phone" placeholder="أدخل رقم هاتف الزبون" required><span id="validPhone"></span>
+          <input id="address" type="address" name="address" placeholder="أدخل عنوان الزبون" required><span id="validAdd"></span>
           <input type="submit" name="submit" value="سجل الان">
         </form>
   </div>
 </div>
+<script src="/js/validation.js"></script>

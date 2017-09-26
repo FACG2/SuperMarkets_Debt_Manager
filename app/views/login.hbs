@@ -2,23 +2,18 @@
   <div class="logincontainer">
       <h3>تسجيل الدخول</h3>
     <form id="loginform" action="/login" method="post">
-<!-- <div class="block"> -->
-    <label for="username">اسم المستخدم:</label>
-    <input type="text" id="name" name="email" placeholder="اسم المستخدم هنا ...">
-<!-- </div> -->
-<!-- <div class="block"> -->
-    <label for="password">كلمة السر:</label>
-    <input type="password" name="password" placeholder="كلمة السر هنا ...">
-<!-- </div> -->
+    <label for="email">اسم المستخدم:</label><span id="validEmail"></span>
+    <input type="text" id="email" name="email" placeholder="أدخل إيميلك هنا ..." required maxlength="20">
+    <label for="password">كلمة السر:</label><span id="validPass"></span>
+    <input type="password" id='password' name="password" placeholder="كلمة السر هنا ..." required maxlength="20">
+
     {{#if errStatus}}  <div class="errornote">
       {{err}}
     </div>{{/if}}
       <input type="submit" value="تسجيل الدخول">
 
     </form>
-  <a href='./signup' > حساب مدير جديد</a>
-    <div class="errornote">
-هل نسيت كلمة السر؟
-    </div>
+  <a href='./signup' > انشأ حساب جديد</a>
   </div>
 </div>
+<script src="/js/validation.js"></script>

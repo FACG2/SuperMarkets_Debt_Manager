@@ -1,13 +1,15 @@
 <div class="newusershowcase">
   <div class="newusercontainer">
       <h3>تسجيل مدير جديد</h3>
-        <form class="signUp" style="display:flex;flex-direction:column;"action="/signup" method="post">
-          <input type="text" name="name" placeholder="أدخل اسمك">
-          <input type="password" name="pwd" placeholder="ادخل كلمة المرور">
-          <input type="password" name="confirmPwd" placeholder="أكد كلمة المرور">
-          <input type="email" name="email" placeholder="الايميل">
-          <input type="address" name="address" placeholder="العنوان">
-          <input type="submit" name="submit" value="سجل الان">
-        </form>
-  </div>
+<form class="signUp" style="display:flex;flex-direction:column;"action="/signup" method="post">
+  <input id="username" type="text" name="name" placeholder="أدخل اسمك" required maxlength="20"><span id="validName"></span>
+  <input id="password" type="password" name="pwd" placeholder="ادخل كلمة المرور" required maxlength="20"><span id="strength"></span>
+  <span id="validPass"></span>
+  <input id="confirm" type="password" name="confirmPwd" placeholder="أكد كلمة المرور" required maxlength="20"><span id="validConf"></span>
+  <input id="email"  type="email" name="email" placeholder="الايميل" required maxlength="30"><span id="validEmail"></span>
+  <input id="address" type="address" name="address" placeholder="العنوان" maxlength="50"><span id="validAdd"></span>
+  <input type="submit" name="submit" value="سجل الان">
+</form>
 </div>
+</div>
+<script src="/js/validation.js"></script>
