@@ -809,7 +809,14 @@ justify-content: center;
 .header .navbar .container div{
   width: 100%;
 }
+
 .newusercontainer{
+  width: 100%;
+  margin-top: 0;
+  height: 100%;
+}
+
+.logincontainer{
   width: 100%;
   margin-top: 0;
   height: 100%;
@@ -833,11 +840,21 @@ justify-content: center;
     width: 100%;
   }
 
-.footer{
+.unsignedcontainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 70px;
+}
+
+.footer .container{
 display: flex;
 justify-content: center;
 align-items: center;
 text-align: center;
+width: 100%;
+padding: 10px;
 }
 }
 
