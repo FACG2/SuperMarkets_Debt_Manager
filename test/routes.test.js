@@ -58,7 +58,7 @@ test('Testing the the home page if the reqest have an authinticated token ', (t)
     t.end();
   });
 });
-test.only('Testing the the home page if the reqest have an unauthinticated token ', (t) => {
+test('Testing the the home page if the reqest have an unauthinticated token ', (t) => {
   request(app)
   .get('/')
   .set('Cookie', 'token=77' + token)
@@ -66,7 +66,7 @@ test.only('Testing the the home page if the reqest have an unauthinticated token
   .expect('Content-Type', 'text/html; charset=utf-8')
   .end((err, res) => {
     t.error(err, 'error');
-    t.equal(res.headers['x-powered-by'], undefined, 'Check the framework woh power the server');
+    t.equal(res.headers['x-powered-by'], 'Express', 'Check the framework woh power the server');
     t.equal(res.statusCode, 500, 'Status Code 500');
     t.equal(res.text, 'Something broke! - Server Error 500', 'Should respons with error message');
     t.end();
