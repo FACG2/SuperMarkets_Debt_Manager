@@ -3,12 +3,11 @@
 
 <div class="searchinput">
   <form class="" action="index.html" method="post">
-    <input type="text" name="search" placeholder="ابحث عن الزبون">
+    <input id='search' type="text" name="search" placeholder="ابحث عن الزبون">
   </form>
 </div>
-
-<div class="resultcontainer">
-<div class="avatar">
+<ul class="resultcontainer">
+<li><div class="avatar">
   <img src="images/unkown.png" alt="">
 </div>
 <div class="cname">
@@ -16,11 +15,11 @@
 </div>
 <div class="totaldebt">
 المجموع: 60 شيكل
-</div>
-</div>
+</div></li>
+</ul>
   </div>
 </div>
-<img id="add-btn" src="/images/add-customer.svg" height="25px" width="25px">
+<img id="add-btn" src="/images/add-customer.svg" height="50px" width="50px">
 {{>addCustomerPopup}}
 <script type="text/javascript" src="/js/popUps.js">
 

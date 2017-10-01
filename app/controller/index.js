@@ -7,11 +7,14 @@ const signup = require('./signup.js');
 const search = require('./search.js');
 const logout = require('./logout.js');
 const customer = require('./customer.js');
+const debt = require('./debt.js');
   // example for routes
 router.get('/', home);
 router.get('/search', search);
 router.post('/customer', customer.post);
 router.get('/customer/:id', customer.get);
+// router.get('/customer/:id/debt', debt.get);
+router.post('/customer/:id/debt', debt.post);
 router.get('/login', login.get);
 router.post('/login', login.post);
 router.post('/signup', signup.post);

@@ -32,7 +32,7 @@ exports.isUser = (email, exist) => {
 // };
 exports.findCustomer = (searchKey, userID, getList) => {
   const sql = {
-    text: `SELECT * FROM customers WHERE customername LIKE ${searchKey}% AND user_id = ${userID}`
+    text: `SELECT * FROM customers WHERE customername LIKE '${searchKey}%' AND user_id = '${userID}'`
   };
 
   dbConnection.query(sql, getList);
@@ -53,10 +53,30 @@ exports.getCustomerDebts = (customerId, debts) => {
   dbConnection.query(sql, debts);
 };
 exports.getCustomer = (customerId, userID, customerDetails) => {
-  console.log(customerId, userID);
   const sql = {
     text: 'SELECT * FROM customers WHERE id=$1 AND user_id=$2',
     values: [ customerId, userID ]
   };
   dbConnection.query(sql, customerDetails);
 };
+exports.getAllDebts = (userID, getList) => {
+  const sql = {
+    text: 'SELECT sum(debts.debt_price * debts.debt_quantity) FROM debts JOIN customers ON customers.id = debts.customer_id WHERE customers.user_id =$1',
+    values: [userID]
+  };
+
+  dbConnection.query(sql, getList);
+};
+exports.storeDebt = (records, status) => {
+  const sql = {
+    text: `INSERT INTO debts(debt_type ,debt_price,debt_quantity,customer_id) VALUES${records}`
+  };
+  dbConnection.query(sql, status);
+};
+// exports.storeDebt = (debt, customer_id, status) => {
+//   const sql = {
+//     text: 'INSERT INTO debts(debt_type ,debt_price,debt_quantity,customer_id) VALUES($1,$2,$3 ,$4)',
+//     values: [debt.type, debt.price, debt.quantity, customer_id]
+//   };
+//   dbConnection.query(sql, status);
+// };

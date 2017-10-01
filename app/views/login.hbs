@@ -3,9 +3,15 @@
       <h3>تسجيل الدخول</h3>
     <form id="loginform" action="/login" method="post">
     <label for="email">اسم المستخدم:</label><span id="validEmail"></span>
+<<<<<<< HEAD
     <input type="text" id="email" name="email" placeholder="أدخل إيميلك هنا ..." required maxlength="20">
     <label for="password">كلمة السر:</label><span id="validPass"></span>
     <input type="password" id='password' name="password" placeholder="كلمة السر هنا ..." required maxlength="20">
+=======
+    <input type="text" id="email" name="email" placeholder="أدخل إيميلك هنا ..." required maxlength="50">
+    <label for="password">كلمة السر:</label><span id="validPass"></span>
+    <input type="password" id='password' name="password" placeholder="كلمة السر هنا ..." required maxlength="35">
+>>>>>>> c761a660f467bace154a2418b7be2ed2e9f70d2f
 
     {{#if errStatus}}  <div class="errornote">
       {{err}}

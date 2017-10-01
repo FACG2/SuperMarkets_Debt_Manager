@@ -1,44 +1,22 @@
 <div class="adddebtshowcase">
-  <div class="container">
-      <span class="close">&times;</span>
-      <div class="add_debt">
-        <div id="item">
-          الصنف
-        </div>
-        <div id="price">
-          السعر
-        </div>
-        <div id="quantity">
-          الكمية
-        </div>
-        <div id="total">
-          المجموع
-        </div>
-        <div id="add_icon">
-          <img src="images/add.png" alt="userinfo">
-        </div>
-        </div>
-        <hr>
+  <form class="" action="./debt" method="post">
+    <div class="container">
+        <span class="close">&times;</span>
         <div class="add_debt">
-          <div id="item">
-            شاي
+          <input type="text" name="name" placeholder="الصنف" id="item">
+          <input type="text" name="name" placeholder="سعر الوحدة" id="quantity">
+          <input type="text" name="name" placeholder="الكمية" id="total">
+          <input type="text" name="name" placeholder="المجموع" id="add_icon">
+          <hr>
+
+            <div id="add_icon">
+              <img src="images/delete.png" alt="userinfo">
+            </div>
+            </div>
+          <hr>
+          <div id="addbutton">
+            <input type="submit" name="" value="إضافة">
           </div>
-          <div id="price">
-            10
-          </div>
-          <div id="quantity">
-            1
-          </div>
-          <div id="total">
-            10
-          </div>
-          <div id="add_icon">
-            <img src="images/delete.png" alt="userinfo">
-          </div>
-          </div>
-        <hr>
-        <div id="addbutton">
-          <input type="submit" name="" value="إضافة">
         </div>
-      </div>
+  </form>
 </div>

@@ -5,14 +5,14 @@ const { addCustomer,
 exports.post = (req, res, next) => {
   // adding new customer
   const { name, phone, address } = req.body;
-  const { userID } = req.user; console.log(req.body, userID);
+  const { userID } = req.user;
   // validate
-  if (!(name && phone && name.length > 3 && phone.length > 6)) return res.render('home'  , {errMsg : 'Not Valid customer details'});
+  if (!(name && phone && name.length > 3 && phone.length > 6)) return res.render('home', {errMsg: 'Not Valid customer details'});
   // create customer
   const customer = {name: name, phone: phone, address: address};
   addCustomer(customer, userID, (err, result) => {
     if (err) return next(err);
-    return res.redirect('/customer/' + result.rows[0].id);
+    return res.redirect('/customer/' + result.rows[0].id + '#cust');
   });
 };
 
@@ -29,11 +29,9 @@ exports.get = (req, res, next) => {
       address: result.rows[0].address
     };
     getCustomerDebts(customerId, (err, debts) => {
-      if (err) return next(err); console.log(debts);
+      if (err) return next(err);
+      custmerPageDetails.username = req.user.username;
       custmerPageDetails.debts = debts.rows;
-      custmerPageDetails.total = debts.rows.reduce((acu, debt) => {
-        acu += debt.debt_price; return acu;
-      }, 0);
       return res.render('customer', custmerPageDetails);
     });
   });

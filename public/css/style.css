@@ -11,7 +11,7 @@ COLORS*/
 body{
 margin: auto;
 direction: rtl;
-background-color: #d9dde0;
+background-color: #cbd9e4;
 height: 600px;
 width: 100%;
 
@@ -22,9 +22,12 @@ a{
 }
 
 h3{
-  color: #5b5c5e;
+  color: #ffffff;
+  padding-left: 50px;
 }
-
+.total>h4{
+  padding-right: 50px;
+}
 .container{
   width: 1170px;
   margin: auto;
@@ -39,7 +42,6 @@ h3{
 
 .header{
   background-color: #373d42;
-  height: 100px;
 }
 
 .header .container{
@@ -76,8 +78,8 @@ h3{
 }
 
 
-/*.header .navbar .container div ul{
-  display: block;
+.header .navbar ul{
+  display: flex;
   list-style: none;
   padding-left: 0;
   overflow: hidden;
@@ -89,10 +91,9 @@ h3{
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   text-align: center;
   }
-*/
+
 ul{
   list-style: none;
 }
@@ -106,17 +107,20 @@ ul{
 }
 
 .header .navbar ul li a{
-  /*float: left;
-  padding: 10px;*/
+  /*float: left;*/
   text-decoration: none;
   color: #fff;
 }
-
+.username{
+      padding: 15px;
+}
 .header .navbar ul li a:hover,
 .header .navbar ul li.active a{
   color: #82bf0d;
 }
-
+.adddebtshowcase{
+  display: none;
+}
 .header .navbar .container div{
   width: 33.333%;
   display: flex;
@@ -165,10 +169,21 @@ img{
 .showcase .container .rside .container {
   background-color: #f2f3f4;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;;
   flex-direction: column;
   }
-
+.total{
+  text-align: center;
+border: solid 2px #8ebcea;
+border-radius: 25px;
+color: #fff;
+background: #607D8B;
+/*width: 80%;*/
+padding: 5px;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+}
   .showcase .container .rside .table {
     background-color: #f2f3f4;
     display: flex;
@@ -177,13 +192,13 @@ img{
     align-items: center;
     }
 
-    .showcase .container .rside .total {
+    /*.showcase .container .rside .total {
       background-color: #f2f3f4;
       display: flex;
       justify-content: flex-start;
       flex-direction: column;
       align-items: center;
-      }
+      }*/
 
     .showcase .container .lside {
       height: 500px;
@@ -229,16 +244,6 @@ align-items: center;
 flex-direction: column;
 }
 
-
-h4{
-      text-align: center;
-      border: solid 2px #8ebcea;
-      border-radius: 25px;
-      color: #fff;
-      background: #607D8B;
-      width: 80%;
-      padding: 5px;
-}
 
 .adddebt_button{
   cursor: pointer;
@@ -548,7 +553,6 @@ input[type=email], select, textarea {
 }*/
 
 .newcustomercontainer {
-    width: 60%;
     border-radius: 5px;
     background-color: #fff;
     text-align: center;
@@ -598,7 +602,9 @@ input[type=email], select, textarea {
   .register input[type=submit]:hover {
       background-color: #f7a307;
   }
-
+li{
+display: flex;
+}
 /*END REGISTER NEW customer'*/
 
 
@@ -649,6 +655,7 @@ input[type=email], select, textarea {
   margin-bottom: 16px; /* Bottom margin */
   resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
 
@@ -672,6 +679,10 @@ input[type=email], select, textarea {
 
 #add-btn{
   cursor: pointer;
+  margin-bottom: 50px;
+  margin-right: 50px;
+  background: lightgreen;
+  border-radius: 50%
 }
 
 /*.searchshowcase .addCustomer .newCustomerForm{
@@ -774,24 +785,44 @@ justify-content: center;
   overflow: hidden;
 }
 
+/*END 404 PART*/
 .show404 .container img{
   height: 500px;
   width: 100%;
+  text-align: center;
 }
-
-/*END 404 PART*/
-
-
 
 
 
 /*START RESPONSIVE PART*/
+@media (min-width: 500px) and (max-width:820px){
+  .header .navbar ul {
+    flex-direction: column;
+    }
+
+}
+@media (min-width: 500px) and (max-width:600px){
+  .newcustomercontainer{
+    width: 70%;
+  }
+}
+@media (min-width: 600px){
+  .newcustomercontainer{
+    width: 50%;
+  }
+}
 
 @media (max-width: 500px){
 .header{
-  padding-bottom: 170px;
   overflow: hidden;
 }
+.header2{
+  order:-1;
+}
+.header .navbar ul {
+   flex-direction: row;
+}
+
 .header .navbar .container {
   display: flex;
   justify-content: center;
@@ -828,16 +859,11 @@ justify-content: center;
   }
 
   .resultcontainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
     width: 100%;
   }
 
   .newcustomercontainer{
-    width: 100%;
+    width: 90%;
   }
 
 .unsignedcontainer{
@@ -855,7 +881,6 @@ align-items: center;
 text-align: center;
 width: 100%;
 padding: 10px;
-}
 }
 
 /*END RESPONSIVE PART*/

@@ -1,9 +1,5 @@
 <div id="addCustomer" class="newCustomerForm {{#if errMsg}}newCustomerForm--open{{/if}}">
-  <!-- Modal content -->
-  <!-- <div class="popUpContainer"> -->
-
-    <!-- <div class="newcustomershowcase"> -->
-      <div class="newcustomercontainer">
+      <div class="newcustomercontainer newcustomercontainer-mobile ">
         <span class="close">&times;</span>
           <h3>تسجيل زبون جديد</h3>
             <form class="register" action="/customer" method="post">
@@ -14,7 +10,4 @@
                 {{#if errMsg}}<span class="invalid">{{errMsg}}</span>{{/if}}
             </form>
       </div>
-    <!-- </div> -->
-  <!-- </div> -->
-
 </div>

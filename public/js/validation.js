@@ -48,7 +48,10 @@ if (username) {
       } else {
         username.style.border = '1px solid green';
         validName.innerHTML = ' ';
+<<<<<<< HEAD
         // validName.innerHTML = '<span>Your username is valid :)</span>';
+=======
+>>>>>>> c761a660f467bace154a2418b7be2ed2e9f70d2f
       }
     }
   });
@@ -66,7 +69,10 @@ email.addEventListener('focusout', function () {
     } else {
       email.style.border = '1px solid green';
       validEmail.innerHTML = ' ';
+<<<<<<< HEAD
     //  validEmail.innerHTML = '<span>Your email is valid :)</span>';
+=======
+>>>>>>> c761a660f467bace154a2418b7be2ed2e9f70d2f
     }
   }
 });
@@ -84,7 +90,10 @@ password.addEventListener('focusout', function () {
   } else {
     password.style.border = '1px solid green';
     validPass.innerHTML = ' ';
+<<<<<<< HEAD
     // validPass.innerHTML = '<span>Accepted password :)</span>';
+=======
+>>>>>>> c761a660f467bace154a2418b7be2ed2e9f70d2f
   }
 });
 
@@ -107,7 +116,10 @@ if (confirm) {
       } else {
         confirm.style.border = '1px solid green';
         validConf.innerHTML = ' ';
+<<<<<<< HEAD
         // validConf.innerHTML = '<p>It is ok :)</p>';
+=======
+>>>>>>> c761a660f467bace154a2418b7be2ed2e9f70d2f
       }
     }
   });
@@ -126,7 +138,10 @@ if (address) {
       } else {
         address.style.border = '1px solid green';
         validAdd.innerHTML = ' ';
+<<<<<<< HEAD
         // validAdd.innerHTML = '<span>Your address is valid :)</span>';
+=======
+>>>>>>> c761a660f467bace154a2418b7be2ed2e9f70d2f
       }
     }
   });
@@ -145,7 +160,10 @@ if (phone) {
       } else {
         phone.style.border = '1px solid green';
         validPhone.innerHTML = ' ';
+<<<<<<< HEAD
         // validPhone.innerHTML = '<p>Your phone is valid :)</p>';
+=======
+>>>>>>> c761a660f467bace154a2418b7be2ed2e9f70d2f
       }
     }
   });
