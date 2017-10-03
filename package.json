@@ -3,16 +3,15 @@
   "version": "1.0.0",
   "description": "> It's a simple web based application that help super markets owners and cashier to manage thier customers debts in a simple way ,reliable ,consistent and efficient.",
   "main": "index.js",
-  "nyc":{
-    "include":[
+  "nyc": {
+    "include": [
       "app/**/*.js",
       "public/js/*.js"
-    ],
-    "all":true
+    ]
   },
   "scripts": {
-    "test": "tape ./test/**/*.test.js",
-    "cov":"nyc npm test",
+    "test": "tape ./test/*.test.js",
+    "cov": "nyc npm run test",
     "watch": "nodemon app/index.js"
   },
   "repository": {
@@ -30,6 +29,8 @@
     "nodemon": "^1.12.1",
     "nyc": "^11.2.1",
     "shot": "^3.4.2",
+    "should": "^13.1.0",
+    "supertest": "^3.0.0",
     "tape": "^4.8.0"
   },
   "dependencies": {
