@@ -26,15 +26,5 @@ module.exports = (req, res, next) => {
       return
     }
     return next()
-  } else {
-    if (req.url === '/login' || req.url === '/signup') return res.redirect('/')
-    const token = cookies.token
-    jwt.verify(token, process.env.SECRIT, (err, user) => {
-      if (err) return next({ErrMsg: 'Unauthorized access ,Fack token!', stack: err.stack})
-      else {
-        req.user = {username: user.username, email: user.email, userID: user.userID}
-        return next()
-      }
-    })
   }
 }
