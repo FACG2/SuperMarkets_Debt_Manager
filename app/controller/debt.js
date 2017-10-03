@@ -5,7 +5,7 @@ exports.post = (req, res, next) => {
   let debtsBuffer = ''
   req.on('data', (chunk) => {
     debtsBuffer += chunk
-  })// (debt_type ,debt_price,debt_quantity,customer_id)
+  })
   req.on('end', () => {
     const debts = JSON.parse(debtsBuffer)
     const customerId = req.params.id
