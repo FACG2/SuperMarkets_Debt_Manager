@@ -1,4 +1,4 @@
-# Super Market Debt manager
+# Super Market Debt manager [![Build Status](https://travis-ci.org/FACG2/SuperMarkets_Debt_Manager.svg?branch=master)](https://travis-ci.org/FACG2/SuperMarkets_Debt_Manager)
  > It's a simple web based application that help super markets owners and cashier to manage thier customers debts in a simple way ,reliable ,consistent and efficient. 
  
 ### Objectives
