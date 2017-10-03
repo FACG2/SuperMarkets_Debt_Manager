@@ -2,7 +2,7 @@ const tape = require('tape');
 const {
   regFormValidator,
   loginFormValidator
-} = require('../app/cont_helpers/validator.js');
+} = require('../app/controller/cont_helpers/validator.js');
 
 tape('Testing backend submited Resgestration form validator', (test) => {
   const form = {
