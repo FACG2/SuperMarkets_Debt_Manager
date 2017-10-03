@@ -1,6 +1,6 @@
-const {loginFormValidator} = require('../helpers/validator.js')
+const {loginFormValidator} = require('./cont_helpers/validator.js')
 const {isUser} = require('../models/queries/db_queries.js')
-const jwtMaker = require('../helpers/cookieEncrypt.js')
+const jwtMaker = require('./cont_helpers/cookieEncrypt.js')
 const bcrypt = require('bcrypt')
 exports.post = (req, res, next) => {
   const {user} = req
