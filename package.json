@@ -2,7 +2,7 @@
   "name": "SuperMarkets_Debt_Manager",
   "version": "1.0.0",
   "description": "> It's a simple web based application that help super markets owners and cashier to manage thier customers debts in a simple way ,reliable ,consistent and efficient.",
-  "main": "index.js",
+  "main": "app/index.js",
   "nyc": {
     "include": [
       "app/**/*.js",
@@ -10,6 +10,7 @@
     ]
   },
   "scripts": {
+    "start": "node app/index.js",
     "test": "tape ./test/*.test.js",
     "cov": "nyc npm run test",
     "watch": "nodemon app/index.js"
@@ -26,6 +27,7 @@
   },
   "homepage": "https://github.com/FACG2/SuperMarkets_Debt_Manager#readme",
   "devDependencies": {
+    "coveralls": "^3.0.0",
     "nodemon": "^1.12.1",
     "nyc": "^11.2.1",
     "shot": "^3.4.2",
