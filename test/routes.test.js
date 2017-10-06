@@ -32,17 +32,17 @@ test('logout test', (t) => {
 });
 
 test('search data test', (t) => {
-  var obj = {customername: 'hani'};
+  var obj = {customername: 'kamal', userID: 1};
   request(app)
       .post('/search')
       .send(obj)
-      .expect(302)
+      .expect(200)
       .end(function (err, res) {
         if (err) {
           t.notOk(err);
         } else {
-          console.log('hani', res);
-          t.equal(res.body.customername, 'hani', 'equal');
+          console.log('kamal', res);
+          t.equal(res.body.customername, 'kamal', 'equal');
         }
         t.end();
       });
