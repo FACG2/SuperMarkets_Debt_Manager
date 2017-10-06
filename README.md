@@ -1,6 +1,6 @@
-# Super Market Debt manager [![Build Status](https://travis-ci.org/FACG2/SuperMarkets_Debt_Manager.svg?branch=master)](https://travis-ci.org/FACG2/SuperMarkets_Debt_Manager)
- > It's a simple web based application that help super markets owners and cashier to manage thier customers debts in a simple way ,reliable ,consistent and efficient. 
- 
+# Super Market Debt manager [![Build Status](https://travis-ci.org/FACG2/SuperMarkets_Debt_Manager.svg?branch=master)](https://travis-ci.org/FACG2/SuperMarkets_Debt_Manager) [![Coverage Status](https://coveralls.io/repos/github/FACG2/SuperMarkets_Debt_Manager/badge.svg?branch=master)](https://coveralls.io/github/FACG2/SuperMarkets_Debt_Manager?branch=master)
+ > It's a simple web based application that help super markets owners and cashier to manage thier customers debts in a simple way ,reliable ,consistent and efficient.
+
 ### Objectives
 #### Who am I designing for?
 * supermarket owners.
@@ -68,8 +68,8 @@ I like hanging out, watching movie, and organizing time, but I hate work pressur
 
 ### Surveying:
 
- **Opening questions:** 
- 
+ **Opening questions:**
+
 How do you do? How are you?
 
 How is your work going?
@@ -89,21 +89,21 @@ If paper How do you feel about it?
 Do you like technology?
 
 Did you try any application to solve your problems?
-  
+
   If yes
-   
+
    How do you find it? Does it solve all your problems? Or do you still have problems?
-    
+
     If yes
-      
+
       Are you still using the same application?
-    
+
     If no
-      
+
       Why did you stop using it?
-   
-   If no 
-    
+
+   If no
+
     Why you did not try?
 
 If there is an application that solve your problems will you use it?
@@ -116,14 +116,14 @@ If there is an application that solve your problems will you use it?
  #### Synthesis
  From the users interviews, we came across a few interesting findings:
  our first hypothes which states that the supermarket owners need an app to help them organizing the debts was certainly true, but the second hypotheses which states the supermarket owners want to get rid of the reading and writing in notebooks or papers was not fully true, 50% of our sample accepted it, but the rest had a lack of trust in dealing with the apps only, and refused to leave the debt registration in the notebooks.
- 
+
  ### Some Other observations:
-  * For some of them it seems that they find it easy to use, 
+  * For some of them it seems that they find it easy to use,
   * And some of them had trouble with adding multiple debts from the add debt page.
   one of Them didn't get the idea about the testing and it's just a prototype !!however we clearaify and explain it at the start of the session but they still not getting it! .
   one of the users that were tested was trying to do other operations like search and deleting customer account and clear a customer balance,and kept complaining about that !
 
 ## See the [Prototype](https://projects.invisionapp.com/share/USDIT1OE7)
-```javascript 
-Groups.kea_members = { 'aya' , 'kefah' ,'eslam' } 
+```javascript
+Groups.kea_members = { 'aya' , 'kefah' ,'eslam' }
 ```
